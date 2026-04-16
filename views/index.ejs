@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Heading -->
+    <h1>My Notes</h1>
+
+    <!-- Form -->
+    <div class="form-box">
+
+      <form id="noteForm" action="/submit" method="POST">
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="description" placeholder="Description" required></textarea>
+        <input type="date" name="date" required>
+
+        <button type="submit">Add Note</button>
+      </form>
+    </div>
+
+
+
+    <!-- Notes Container -->
+    <div id="notesContainer" class="notes-grid">
+
+      <% if(notes.length === 0){ %>
+        <div class="NoTask text-white">
+          <h3>No Task Yet...</h3>
+        </div>
+      <% } %>
+
+      <!-- Notes Display -->
+      <% notes.forEach(function(note, index){    %>    
+        <div class="note-card">
+        <h2 class="font-bold font-sans">Title : <%= note.title %></h2>
+        <p>Description : <%= note.description %></p>
+        <span>Date : <%= note.date %></span>
+        <br/>
+        <a href="/read/<%= note.filename %>" class="btn-link">Read More</a>
+        </div>
+      <% }) %>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

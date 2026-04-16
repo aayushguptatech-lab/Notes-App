@@ -1,0 +1,104 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(24, 24, 27);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Heading */
+h1 {
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size:xx-large;
+    margin-bottom: 20px;
+}
+
+/* Form Box */
+.form-box{
+    font-style: bold;
+    font-size: x-large;
+    background: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+form input,
+form textarea {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Button */
+button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+/* Notes Grid */
+.notes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* Card */
+.note-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Card Text */
+.note-card h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.note-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.note-card span {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    .notes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

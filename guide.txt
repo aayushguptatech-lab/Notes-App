@@ -1,0 +1,14 @@
+we are going to make the 'NOTES MAKING APP'
+    1) title
+    2)discription
+    3)date
+
+    4)these cards will save in folder in the form of txt file
+
+
+
+step_1) we want the file system so that i can see the information inside the folder and file
+        fs.readdir(err, file)
+        now i get the excess of each files in the files folder and i can also count the number of files in the files folder
+
+step_2)
